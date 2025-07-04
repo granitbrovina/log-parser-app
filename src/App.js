@@ -90,8 +90,9 @@ const App = () => {
     <Layout style={{ minHeight: '100vh', fontFamily: 'Noto Sans' }}>
       <Header style={{ backgroundColor: '#001529', padding: '0 24px', display: 'flex', alignItems: 'center' }}>
         <CodeOutlined style={{ color: '#1890ff', fontSize: '28px', marginRight: '16px' }} />
+        {/* --- CHANGE 1: Header Title --- */}
         <Title level={3} style={{ color: 'white', lineHeight: '64px', margin: 0 }}>
-          Device Log Analyzer
+          Joan Device Log Analyzer
         </Title>
       </Header>
       <Content style={{ padding: '24px 48px' }}>
@@ -99,7 +100,8 @@ const App = () => {
           {!analysis ? (
             <div style={{ textAlign: 'center', padding: '48px 0' }}>
               <Spin spinning={loading} size="large" tip="Analyzing...">
-                <Title level={2}>Upload Your Log File</Title>
+                {/* --- CHANGE 2: Main Page Title --- */}
+                <Title level={2}>Upload Your Joan device Log File</Title>
                 <Paragraph type="secondary">
                   Select a .txt log file to begin analysis. The app will automatically extract device information and identify known errors.
                 </Paragraph>
@@ -165,8 +167,9 @@ const App = () => {
           )}
         </Card>
       </Content>
+      {/* --- CHANGE 3: Footer Text --- */}
       <Footer style={{ textAlign: 'center', backgroundColor: '#001529', color: 'rgba(255, 255, 255, 0.65)' }}>
-        Log Parser App ©2025 - Built with React and Ant Design
+        Joan Log Parser App ©2025
       </Footer>
     </Layout>
   );
